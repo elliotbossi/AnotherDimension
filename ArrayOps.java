@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class ArrayOps {
 
   public static int sum(int[] arr) {
@@ -25,5 +26,22 @@ public class ArrayOps {
       i = i + 1;
     }
     return big;
+  }
+
+  public static int[] sumRows(int[][] matrix) {
+    int first = 0;
+    int second = 0;
+    int i = 0;
+    while (i < matrix[0].length) {
+      first = first + matrix[0][i];
+      i = i + 1;
+    }
+    i = 0;
+    while (i < matrix[1].length) {
+      second = second + matrix[1][i];
+      i = i + 1;
+    }
+    int[]arr = {first,second};
+    return arr;
   }
 }
