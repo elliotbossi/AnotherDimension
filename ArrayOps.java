@@ -95,4 +95,19 @@ public class ArrayOps {
     }
     return (x == y);
   }
+
+  public static boolean isColMagic(int[][] matrix) {
+    int arr[] = sumCols(matrix);
+    boolean result = false;
+    int i = 1;
+    int x = arr.length - 1;
+    int y = 0;
+    while (i < arr.length) {
+      if (arr[i] == arr[i-1]) {
+        y = y + 1;
+      }
+      i = i + 1;
+    }
+    return (x == y);
+  }
 }
