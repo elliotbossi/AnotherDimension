@@ -53,13 +53,13 @@ public class ArrayOps {
   public static int sum(int[][] arr) {
     int sum = 0;
     int i = 0;
-    while (i < arr[0].length) {
-      sum = sum + arr[0][i];
-      i = i + 1;
-    }
-    i = 0;
-    while (i < arr[1].length) {
-      sum = sum + arr[1][i];
+    int x = 0;
+    while (i < arr.length) {
+      x = 0;
+      while (x < arr[i].length) {
+        sum = sum + arr[i][x];
+        x = x + 1;
+      }
       i = i + 1;
     }
     return sum;
