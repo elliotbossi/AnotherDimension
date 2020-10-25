@@ -44,4 +44,25 @@ public class ArrayOps {
     int[]arr = {first,second};
     return arr;
   }
+
+  public static  int[] largestInRows(int[][] matrix) {
+    int first = 0;
+    int second = 0;
+    int i = 0;
+    while (i < matrix[0].length) {
+      if (matrix[0][i] > first) {
+        first = matrix[0][i];
+      }
+      i = i + 1;
+    }
+    i = 0;
+    while (i < matrix[1].length) {
+      if (matrix[1][i] > second) {
+        second = matrix[1][i];
+      }
+      i = i + 1;
+    }
+    int[]arr = {first,second};
+    return arr;
+  }
 }
