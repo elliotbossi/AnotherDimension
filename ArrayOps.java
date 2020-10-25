@@ -64,4 +64,35 @@ public class ArrayOps {
     }
     return sum;
   }
+
+  public static int[] sumCols(int[][] matrix) {
+    int i = 0;
+    int x = 0;
+    int bruh = matrix[0].length;
+    int arr[] = new int[bruh];
+    while (x < bruh) {
+      i = 0;
+      while (i < matrix.length) {
+        arr[x] = arr[x] + matrix[i][x];
+        i = i + 1;
+      }
+      x = x + 1;
+    }
+    return arr;
+  }
+
+  public static boolean isRowMagic(int[][] matrix) {
+    int arr[] = sumRows(matrix);
+    boolean result = false;
+    int i = 1;
+    int x = arr.length - 1;
+    int y = 0;
+    while (i < arr.length) {
+      if (arr[i] == arr[i-1]) {
+        y = y + 1;
+      }
+      i = i + 1;
+    }
+    return (x == y);
+  }
 }
