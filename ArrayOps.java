@@ -65,4 +65,20 @@ public class ArrayOps {
     int[]arr = {first,second};
     return arr;
   }
+
+  public static  int sum(int[][] arr) {
+    int sum = 0;
+    int i = 0;
+    while (i < arr[0].length) {
+      sum = sum + arr[0][i];
+      i = i + 1;
+    }
+    i = 0;
+    while (i < arr[1].length) {
+      sum = sum + arr[1][i];
+      i = i + 1;
+    }
+    return sum;
+  }
+
 }
