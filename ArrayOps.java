@@ -29,44 +29,28 @@ public class ArrayOps {
   }
 
   public static int[] sumRows(int[][] matrix) {
-    int first = 0;
-    int second = 0;
     int i = 0;
-    while (i < matrix[0].length) {
-      first = first + matrix[0][i];
+    int arr[] = new int[matrix.length];
+    while (i < matrix.length) {
+      arr[i] = sum(matrix[i]);
       i = i + 1;
     }
-    i = 0;
-    while (i < matrix[1].length) {
-      second = second + matrix[1][i];
-      i = i + 1;
-    }
-    int[]arr = {first,second};
     return arr;
   }
 
-  public static  int[] largestInRows(int[][] matrix) {
-    int first = 0;
-    int second = 0;
+  public static int[] largestInRows(int[][] matrix) {
     int i = 0;
-    while (i < matrix[0].length) {
-      if (matrix[0][i] > first) {
-        first = matrix[0][i];
-      }
+    int x = 0;
+    int arr[] = new int[matrix.length];
+    while (i < matrix.length) {
+      arr[i] = largest(matrix[i]);
       i = i + 1;
     }
-    i = 0;
-    while (i < matrix[1].length) {
-      if (matrix[1][i] > second) {
-        second = matrix[1][i];
-      }
-      i = i + 1;
-    }
-    int[]arr = {first,second};
     return arr;
   }
 
-  public static  int sum(int[][] arr) {
+
+  public static int sum(int[][] arr) {
     int sum = 0;
     int i = 0;
     while (i < arr[0].length) {
@@ -80,5 +64,4 @@ public class ArrayOps {
     }
     return sum;
   }
-
 }
